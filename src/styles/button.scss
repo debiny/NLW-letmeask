@@ -1,0 +1,36 @@
+.button {
+
+    margin-top: 64px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: 500;
+    background: #835afd;
+    color: #fff;
+    padding: 0 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border: 0;
+
+    -webkit-transition: filter 0.2s;
+    -moz-transition: filter 0.2s;
+    -o-transition: filter 0.2s;
+    -ms-transition: filter 0.2s;
+    transition: filter 0.2s;;
+
+    img {
+        margin-right: 8px;
+    }
+
+    &:not(:disabled):hover{
+        filter: brightness(0.9);
+    }
+
+    &:disabled{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
