@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import '../styles/auth.scss'
@@ -8,13 +8,13 @@ import { database } from '../services/firebase'
 
 export function NewRoom() {
     const { user } = useAuth()
-
+    const history = useHistory()
     const [newRoom, setNewRoom] = useState('');
 
     async function handleCreateRoom(event: FormEvent) {
         event.preventDefault();
 
-        if (newRoom.trim() === '' ) {
+        if (newRoom.trim() === '') {
             return;
         }
 
@@ -24,9 +24,12 @@ export function NewRoom() {
         //Salvando  registro
         const firebaseRoom = await roomRef.push({
             title: newRoom,
-            authorId: user?.id,            
+            authorId: user?.id,
         })
+
+        history.push(`/rooms/${firebaseRoom.key}`);
     }
+
 
     return (
         <div id="page-auth">
