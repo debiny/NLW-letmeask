@@ -12,13 +12,13 @@
 
       > img {
         max-height: 45px;
+      }
 
-        >div{
-          display: flex;
-          gap: 16px;
-        }
+      > div {
+        display: flex;
+        gap: 16px;
 
-        button{
+        button {
           height: 40px;
         }
       }
@@ -35,7 +35,7 @@
       align-items: center;
 
       h1 {
-        font-family: "Poppins", sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 24px;
         color: #29292e;
       }
@@ -43,9 +43,9 @@
       span {
         margin-left: 16px;
         background: #e559f9;
-        border-radius: 999px;
+        border-radius: 9999px;
         padding: 8px 16px;
-        color: #fff;
+        color: #FFF;
         font-weight: 500;
         font-size: 14px;
       }
@@ -63,8 +63,6 @@
         min-height: 130px;
       }
 
-    
-
       .form-footer {
         display: flex;
         justify-content: space-between;
@@ -81,37 +79,34 @@
             border-radius: 50%;
           }
 
-          > span{
+          span {
             margin-left: 8px;
             color: #29292e;
             font-weight: 500;
             font-size: 14px;
-
           }
         }
 
-        span {
+        > span {
           font-size: 14px;
-          color: #737388;
+          color: #737380;
           font-weight: 500;
 
           button {
             background: transparent;
             border: 0;
+            color: #835AFD;
             text-decoration: underline;
-            font-weight: 500;
             font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
-            color: #835afd;
           }
         }
       }
     }
 
-    .question-list{
+    .question-list {
       margin-top: 32px;
-
     }
-
   }
 }
